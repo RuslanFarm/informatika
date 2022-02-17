@@ -1,0 +1,22 @@
+import math
+
+print('Zadacha_11')
+
+kod = int(input('Сколько всего символов? '))
+alf = int(input('Чему равен алфавит? '))
+print("0 = Биты    1 = Байты   2 = Килобайты")
+ask = int(input('В чём выражать ответ? '))
+bank = int(input("Дополнительное кол-во байт для хранения инф? "))
+n = int(input('Количество повторов? '))
+i = 0
+
+while 2 ** i <= alf:
+    i += 1
+
+
+if ask == 0:
+    print('Объём памяти =', ((math.ceil(kod * i) + bank) * n))
+elif ask == 1:
+    print('Объём памяти =', (math.ceil((kod * i / 8) + bank) * n))
+elif ask == 2:
+    print('Объём памяти =', (math.ceil((kod * i / (8 * 1024) + bank) * n)))
