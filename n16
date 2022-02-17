@@ -1,0 +1,9 @@
+def F(n):
+    s = 0
+    if n == 1:
+        return n*3
+    elif n > 1:
+        s += 2*F(n-1) - n + 1
+        print('s', s)
+        return s
+F(21)
