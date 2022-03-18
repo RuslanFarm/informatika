@@ -1,0 +1,8 @@
+from itertools import *
+a = list(product("КАНТ", repeat = 6))
+i = 0
+for x in a:
+    x =''.join(x)
+    if x.count("К") == 2:
+        i +=1
+print(i)
