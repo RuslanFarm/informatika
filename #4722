@@ -1,0 +1,17 @@
+#4722
+a = open('aasd.txt')
+k = [int(i) for i in a]
+d = [j for j in k if j % 35 == 0]
+cnt = 0
+summa = 0
+koo = []
+for s in d:
+    summa += s // 1000 + s % 1000 // 100 + s % 100 // 10 + s % 10
+for i in range(len(k) - 1):
+    if (k[i] > summa >= k[i+1]) and str(hex(k[i+1])[2:][-2:]) == 'ef':
+        cnt += 1
+        koo += [k[i] + k[i + 1]]
+    elif (k[i+1] > summa >= k[i]) and str(hex(k[i])[2:][-2:]) == 'ef':
+        cnt += 1
+        koo += [k[i] + k[i + 1]]
+print(cnt, min(koo))
