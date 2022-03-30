@@ -5,3 +5,12 @@ for a in range(100):
     if f:
         print(a)
         break
+"""
+for a in range(1, 10000):
+    f = 1
+    for x in range(1, 10000):
+        f *= ((x % 54 == 0) and (x % 80 == 0)) or  x % a != 0
+    if f:
+        print(a)
+        break
+"""
