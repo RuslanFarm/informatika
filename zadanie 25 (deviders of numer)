@@ -1,0 +1,22 @@
+# https://kpolyakov.spb.ru/school/ege/gen.php?action=viewTopic&topicId=2842
+# Kpolyakov N 2842
+def delit(n):
+    s = set()
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            s.add(i)
+            s.add(n//i)
+    return list(s)
+
+"""def prost(n):
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+        return True"""
+cnt = 0
+for i in range(12034679, 23175821 + 1):
+    if int(i ** 0.5) == i ** 0.5:
+        a = delit(i)
+        if len(a) == 3:
+            print(i, max(a))
+
