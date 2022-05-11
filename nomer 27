@@ -8,7 +8,7 @@ for line in f:
     maxx = max(a, b)
     minn = min(a, b)
 
-    s += abs(a-b)  # s += maxx
+    s += maxx  # s += abs(a-b)
     if (maxx-minn) % 3 != 0:
         minr = min(minr, maxx-minn)
 if s % 3 != 0:
